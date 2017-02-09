@@ -34,6 +34,8 @@
             this.stateLable = new ns1.BunifuCustomLabel();
             this.outputTextbox = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.inputTextbox = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.bunifuDragControl1 = new ns1.BunifuDragControl(this.components);
+            this.Header = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -46,7 +48,7 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(12, 9);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(12, 15);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(288, 28);
             this.bunifuCustomLabel1.TabIndex = 1;
@@ -86,12 +88,29 @@
             this.inputTextbox.Size = new System.Drawing.Size(287, 21);
             this.inputTextbox.TabIndex = 8;
             // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.Header;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // Header
+            // 
+            this.Header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(84)))), ((int)(((byte)(0)))));
+            this.Header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Header.Location = new System.Drawing.Point(0, 0);
+            this.Header.Name = "Header";
+            this.Header.Size = new System.Drawing.Size(312, 12);
+            this.Header.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.ClientSize = new System.Drawing.Size(312, 155);
+            this.Controls.Add(this.Header);
             this.Controls.Add(this.inputTextbox);
             this.Controls.Add(this.outputTextbox);
             this.Controls.Add(this.stateLable);
@@ -112,6 +131,8 @@
         private ns1.BunifuCustomLabel stateLable;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox inputTextbox;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox outputTextbox;
+        private ns1.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.Panel Header;
     }
 }
 
